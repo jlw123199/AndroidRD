@@ -35,10 +35,23 @@
             </intent-filter>
         </activity>
 
+        <!--Add Service -->
         <service android:name=".MyService" />
 
         <!--<uses-library android:name="com.google.android.things" />-->
 
+        <!--Add Boardcast Receiver-->
+        <receiver android:name="MyBroadcastReceiver">
+
+            <intent-filter>
+                <!--<action android:name="android.intent.action.BOOT_COMPLETED">-->
+                <!--</action>-->
+                <action android:name="com.xl.learnapp.CUSTOM_INTENT">
+                </action>
+
+            </intent-filter>
+
+        </receiver>
 
     </application>
 

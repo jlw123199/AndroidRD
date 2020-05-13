@@ -10,6 +10,10 @@ import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
 import android.content.Intent
 import android.view.View
+import android.content.ComponentName
+
+
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -83,5 +87,14 @@ class MainActivity : AppCompatActivity() {
     public override fun onDestroy() {
         super.onDestroy()
         Log.d(msg, "The onDestroy() event")
+    }
+
+    /** 广播自定义意图 */
+    fun broadcastIntent(view: View) {
+        val intent = Intent()
+        intent.action = "com.xl.learnapp.CUSTOM_INTENT"
+        intent.component = ComponentName("com.xl.learnapp", "com.xl.learnapp.MyBroadcastReceiver")
+        sendBroadcast(intent)
+
     }
 }

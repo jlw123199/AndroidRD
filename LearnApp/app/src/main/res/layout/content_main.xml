@@ -39,7 +39,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
+        android:id="@+id/buttonStart"
         android:text="启动服务"
         android:onClick="startService"
         android:layout_below="@+id/imageButton"
@@ -49,13 +49,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="停止服务"
-        android:id="@+id/button"
+        android:id="@+id/buttonStop"
         android:onClick="stopService"
-        android:layout_below="@+id/button2"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2" />
+        android:layout_below="@+id/buttonStart"
+        android:layout_alignLeft="@+id/buttonStart"
+        android:layout_alignStart="@+id/buttonStart"
+        android:layout_alignRight="@+id/buttonStart"
+        android:layout_alignEnd="@+id/buttonStart" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonBoardcast"
+        android:text="广播意图"
+        android:onClick="broadcastIntent"
+        android:layout_below="@+id/buttonStop"
+        android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>
 
