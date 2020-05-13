@@ -97,4 +97,10 @@ class MainActivity : AppCompatActivity() {
         sendBroadcast(intent)
 
     }
+
+
+    fun buttonContentActivityClick(view: View) {
+        val intent = Intent(this@MainActivity, ContentProviderActivity::class.java)
+        startActivity(intent)
+    }
 }

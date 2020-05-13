@@ -9,8 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
         <activity
             android:name=".MainNavActivity"
             android:label="@string/title_activity_main_nav"
@@ -35,23 +33,37 @@
             </intent-filter>
         </activity>
 
-        <!--Add Service -->
+        <!-- Add Service -->
         <service android:name=".MyService" />
 
-        <!--<uses-library android:name="com.google.android.things" />-->
+        <!-- <uses-library android:name="com.google.android.things" /> -->
 
-        <!--Add Boardcast Receiver-->
-        <receiver android:name="MyBroadcastReceiver">
 
+        <!-- Add Boardcast Receiver -->
+        <receiver android:name=".MyBroadcastReceiver">
             <intent-filter>
-                <!--<action android:name="android.intent.action.BOOT_COMPLETED">-->
-                <!--</action>-->
-                <action android:name="com.xl.learnapp.CUSTOM_INTENT">
-                </action>
 
+                <!-- <action android:name="android.intent.action.BOOT_COMPLETED"> -->
+                <!-- </action> -->
+                <action android:name="com.xl.learnapp.CUSTOM_INTENT"></action>
             </intent-filter>
-
         </receiver>
+
+        <!-- Add Provider Receiver -->
+        <provider android:name="StudentsProvider"
+            android:authorities="com.xl.learnapp.StudentsProvider" >
+        </provider>
+
+        <activity
+            android:name=".ContentProviderActivity"
+            android:label="@string/title_activity_content_provider"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
     </application>
 
